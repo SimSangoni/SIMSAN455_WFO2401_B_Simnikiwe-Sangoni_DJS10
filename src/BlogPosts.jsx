@@ -8,21 +8,17 @@ export default function BlogPosts() {
         try {
             const res = await fetch('https://jsonplaceholder.typicode.com/posts');
             const data = await res.json();
-            console.log(data)
+            setPosts(data)
+            console.log(data[0])
         } catch (err) {
 
         }
     }
 
-    useEffect(()=> {
-        fetchPosts()
-    },
-    [])
+    useEffect(()=> {fetchPosts()}, [])
 
-    
-    // .then(response => response.json())
-    // .then(data => console.log(data[0]))
-    // .catch(error => console.error('Error:', error));
+    // const postElements = 
+
 
   return (
     <>
