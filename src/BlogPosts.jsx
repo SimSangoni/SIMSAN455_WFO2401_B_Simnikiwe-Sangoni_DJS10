@@ -4,15 +4,25 @@ export default function BlogPosts() {
 
     const [posts, setPosts] = useState([])
 
-    useEffect(()=> {
+    async function fetchPosts(){
+        try {
+            const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+            const data = await res.json();
+            console.log(data)
+        } catch (err) {
 
+        }
+    }
+
+    useEffect(()=> {
+        fetchPosts()
     },
     [])
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(data => console.log(data[0]))
-    .catch(error => console.error('Error:', error));
+    
+    // .then(response => response.json())
+    // .then(data => console.log(data[0]))
+    // .catch(error => console.error('Error:', error));
 
   return (
     <>
