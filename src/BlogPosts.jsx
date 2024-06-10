@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 export default function BlogPosts() {
 
     const [posts, setPosts] = useState([])
+    const [error, setError] = useState(null);
 
     async function fetchPosts(){
         try {
