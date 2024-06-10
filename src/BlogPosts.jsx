@@ -32,10 +32,9 @@ export default function BlogPosts() {
 
   return (
     <div>
-      {error ?
-        <div> {error} </div>
-        : postElements
-        }
+     
+        {postElements}
+        
     </div>
   )
 }
