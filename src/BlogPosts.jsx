@@ -1,8 +1,13 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export default function BlogPosts() {
 
     const [posts, setPosts] = useState([])
+
+    useEffect(()=> {
+
+    },
+    [])
 
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
