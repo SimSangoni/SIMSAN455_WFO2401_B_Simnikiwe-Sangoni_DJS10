@@ -33,8 +33,10 @@ export default function BlogPosts() {
 
   return (
     <div className="posts-container">
-     
-        {postElements}
+        {
+        error ? <div className="error-message"> {error} </div>
+        : postElements
+        }
         
     </div>
   )
