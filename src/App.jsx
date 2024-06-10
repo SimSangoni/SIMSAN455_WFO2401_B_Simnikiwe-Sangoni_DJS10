@@ -34,7 +34,8 @@ export default function BlogPosts() {
   return (
     <>
         {
-        error ? <div className="error-message"> {error} </div>
+        error 
+        ? <div className="error-message"> {error} </div>
         : 
         <div className="posts-container">
             <h1>Posts</h1>
