@@ -17,24 +17,22 @@ export default function BlogPosts() {
 
     useEffect(()=> {fetchPosts()}, [])
 
-    // const postElements = 
+    const postElements = posts.map((post)=> {
+        <div key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+        </div>
+        
+    })
 
 
   return (
-    <>
-      
-      <h1>This is the BlogPosts Page</h1>
-      
-    </>
+    <div>
+      {postElements}
+    </div>
   )
 }
 
-// {
-//     userId: 1, 
-//     id: 1, 
-//     title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 
-//     body: 'quia et suscipit\nsuscipit recusandae consequuntur 
-//     …strum rerum est autem sunt rem eveniet architecto'
-// }
+
 
  
