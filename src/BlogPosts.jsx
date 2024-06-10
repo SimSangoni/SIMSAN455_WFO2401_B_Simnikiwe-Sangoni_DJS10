@@ -21,9 +21,9 @@ export default function BlogPosts() {
 
     useEffect(()=> {fetchPosts()}, [])
 
-    const postElements = posts.map((post)=> (
+    const postElements = posts.map((post, index)=> (
         <div key={post.id}>
-            <h2>{post.title}</h2>
+            <h2>{`${index + 1}. ${post.title}`}</h2>
             <p>{post.body}</p>
         </div>
         )  
