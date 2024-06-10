@@ -31,7 +31,7 @@ export default function BlogPosts() {
 
 
   return (
-    <div>
+    <div className="posts-container">
      
         {postElements}
         
