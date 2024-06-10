@@ -8,10 +8,13 @@ export default function BlogPosts() {
     async function fetchPosts(){
         try {
             const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+            if (!res.ok){
+                throw new Error('Error 404')
+            }
             const data = await res.json();
             setPosts(data)
-            console.log(data[0])
         } catch (err) {
+            setError('Data fetching failed')
 
         }
     }
