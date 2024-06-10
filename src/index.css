@@ -17,3 +17,12 @@
   text-align: center;
   color: #666;
 }
+
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 1.2rem;
+  }
+  .post-body {
+    font-size: 1rem;
+  }
+}
