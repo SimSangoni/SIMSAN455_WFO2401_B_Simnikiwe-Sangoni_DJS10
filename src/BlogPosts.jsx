@@ -24,7 +24,7 @@ export default function BlogPosts() {
     const postElements = posts.map((post, index)=> (
         <div key={post.id}>
             <h2 className="post-title">{`${index + 1}. ${post.title}`}</h2>
-            <p>{post.body}</p>
+            <p className="post-body">{post.body}</p>
         </div>
         )  
     )

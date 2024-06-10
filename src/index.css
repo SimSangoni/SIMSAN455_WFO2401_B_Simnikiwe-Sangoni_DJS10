@@ -11,3 +11,9 @@
   color: #333;
   margin-bottom: 0.5rem;
 }
+
+.post-body {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+}
